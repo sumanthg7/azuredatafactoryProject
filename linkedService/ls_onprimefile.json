@@ -1,0 +1,17 @@
+{
+	"name": "ls_onprimefile",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "FileServer",
+		"typeProperties": {
+			"host": "C:\\azure",
+			"userId": "sumanth\\suman",
+			"encryptedCredential": "eyJDcmVkZW50aWFsSWQiOiJkY2QzMWQyOS01Njc5LTQ2ODQtYjg4ZC1lYTdhYWJkMTZmYzUiLCJWZXJzaW9uIjoiMi4wIiwiQ2xhc3NUeXBlIjoiTWljcm9zb2Z0LkRhdGFQcm94eS5Db3JlLkludGVyU2VydmljZURhdGFDb250cmFjdC5DcmVkZW50aWFsU1UwNkNZMTQifQ=="
+		},
+		"connectVia": {
+			"referenceName": "self-hostedIr",
+			"type": "IntegrationRuntimeReference"
+		}
+	}
+}

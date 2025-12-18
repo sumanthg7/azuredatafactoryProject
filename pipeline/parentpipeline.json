@@ -1,0 +1,72 @@
+{
+	"name": "parentpipeline",
+	"properties": {
+		"activities": [
+			{
+				"name": "getmetadata",
+				"type": "ExecutePipeline",
+				"dependsOn": [],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "getmetadata",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "onpremeingestion",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "getmetadata",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "onprem_ingestion",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			},
+			{
+				"name": "sqltodatalakeincremental",
+				"type": "ExecutePipeline",
+				"dependsOn": [
+					{
+						"activity": "onpremeingestion",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"pipeline": {
+						"referenceName": "sqltodatalake",
+						"type": "PipelineReference"
+					},
+					"waitOnCompletion": true
+				}
+			}
+		],
+		"annotations": [],
+		"lastPublishTime": "2025-12-09T05:29:41Z"
+	},
+	"type": "Microsoft.DataFactory/factories/pipelines"
+}

@@ -1,0 +1,17 @@
+{
+	"name": "ls_azuresql",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "AzureSqlDatabase",
+		"typeProperties": {
+			"server": "adminserversumanth.database.windows.net",
+			"database": "admindb",
+			"encrypt": "mandatory",
+			"trustServerCertificate": false,
+			"authenticationType": "SQL",
+			"userName": "adminsumanth",
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDM2NEFENEMwLTM3MjItNDU2MS1CMDgxLUNERTU3MzQwODcwRV82ZTU0MTYyMy03NGNjLTQwZmYtYjVmZC02YmE4MzA4ZWQ3MWUiDQp9"
+		}
+	}
+}

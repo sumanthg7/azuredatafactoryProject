@@ -1,0 +1,27 @@
+{
+	"name": "onpremesource",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_onprimefile",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"pl_filename": {
+				"type": "string"
+			}
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "FileServerLocation"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	},
+	"type": "Microsoft.DataFactory/factories/datasets"
+}
