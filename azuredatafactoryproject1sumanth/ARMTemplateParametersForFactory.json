@@ -1,0 +1,39 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "azuredatafactoryproject1sumanth"
+		},
+		"ls_azuresql_password": {
+			"value": ""
+		},
+		"ls_datalake_accountKey": {
+			"value": ""
+		},
+		"ls_onprimefile_password": {
+			"value": ""
+		},
+		"HttpServergit_properties_typeProperties_url": {
+			"value": "https://raw.githubusercontent.com/"
+		},
+		"ls_azuresql_properties_typeProperties_server": {
+			"value": "adminserversumanth.database.windows.net"
+		},
+		"ls_azuresql_properties_typeProperties_database": {
+			"value": "admindb"
+		},
+		"ls_azuresql_properties_typeProperties_userName": {
+			"value": "adminsumanth"
+		},
+		"ls_datalake_properties_typeProperties_url": {
+			"value": "https://sumanthstorageaccount1.dfs.core.windows.net/"
+		},
+		"ls_onprimefile_properties_typeProperties_host": {
+			"value": "C:\\azure"
+		},
+		"ls_onprimefile_properties_typeProperties_userId": {
+			"value": "sumanth\\suman"
+		}
+	}
+}
